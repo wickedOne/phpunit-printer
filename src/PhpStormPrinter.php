@@ -42,19 +42,16 @@ class PhpStormPrinter extends DefaultResultPrinter
      */
     protected function printDefectFooter(TestFailure $defect): void
     {
-        foreach ($defect->thrownException()->getTrace() as $frame) {
-            if (false === strpos($frame['file'], 'vendor/phpunit/phpunit')) {
-                $offender = $frame;
+        $trace = explode(PHP_EOL, trim((string) $defect->thrownException()));
+        $offender = end($trace);
 
-                break;
-            }
-        }
+        [$file, $line] = explode(':', $offender);
 
-        if (isset($offender)) {
+        if (isset($file, $line)) {
             $this->write(sprintf(
                 "✏️  phpstorm://open?file=%s&line=%d\n",
-                $offender['file'],
-                $offender['line']
+                $file,
+                $line
             ));
         }
     }
