@@ -1,7 +1,7 @@
 name: merge dependabot upgrades
 
 on:
-  pull_request
+  pull_request:
 
 jobs:
   merge-me:
