@@ -1,0 +1,28 @@
+{
+    "name": "wickedone/phpunit-printer",
+    "description": "phpunit output with phpstorm editor url",
+    "type": "library",
+    "keywords": [
+        "phpunit",
+        "phpstorm",
+        "testing"
+    ],
+    "require": {
+        "php": ">=7.3",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wickedOne",
+            "email": "wicliff.wolda@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WickedOne\\PHPUnitPrinter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
