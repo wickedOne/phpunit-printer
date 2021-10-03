@@ -40,7 +40,7 @@ class PhpStormPrinter extends DefaultResultPrinter
     /**
      * @param \PHPUnit\Framework\TestFailure $defect
      */
-    protected function printDefectFooter(TestFailure $defect): void
+    private function printDefectFooter(TestFailure $defect): void
     {
         $trace = explode(PHP_EOL, trim((string) $defect->thrownException()));
         $offender = end($trace);

@@ -2,6 +2,11 @@
 
 prints additional PhpStorm editor url in PHPUnit cli output.
 
+[![Latest Stable Version](http://poser.pugx.org/wickedone/phpunit-printer/v)](https://packagist.org/packages/wickedone/phpunit-printer) 
+[![Total Downloads](http://poser.pugx.org/wickedone/phpunit-printer/downloads)](https://packagist.org/packages/wickedone/phpunit-printer) 
+[![License](http://poser.pugx.org/wickedone/phpunit-printer/license)](https://packagist.org/packages/wickedone/phpunit-printer) 
+[![PHP Version Require](http://poser.pugx.org/wickedone/phpunit-printer/require/php)](https://packagist.org/packages/wickedone/phpunit-printer)
+
 ## installation
 ```bash
 $ composer require --dev wickedone/phpunit-printer

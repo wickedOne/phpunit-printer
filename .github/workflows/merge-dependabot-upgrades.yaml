@@ -1,7 +1,11 @@
 name: merge dependabot upgrades
 
 on:
-  pull_request:
+  workflow_run:
+    types:
+      - completed
+    workflows:
+      - 'mutation tests'
 
 jobs:
   merge-me:
