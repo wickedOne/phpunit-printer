@@ -21,7 +21,7 @@ specify this printer on the command line:
 $ php vendor/bin/phpunit --printer='WickedOne\PHPUnitPrinter\PhpStormPrinter' src/
 ```
 
-### phpunit xml configuration
+### phpunit xml configuration:
 specify this printer in your ``phpunit.xml.dist``:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

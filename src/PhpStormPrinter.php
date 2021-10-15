@@ -42,8 +42,13 @@ class PhpStormPrinter extends DefaultResultPrinter
      */
     private function printDefectFooter(TestFailure $defect): void
     {
-        $trace = explode(PHP_EOL, trim((string) $defect->thrownException()));
+        $trace = explode(\PHP_EOL, trim((string) $defect->thrownException()));
         $offender = end($trace);
+
+        // the things you do to please infection... ;-)
+        if (false === \is_int(strpos($offender, ':'))) {
+            return;
+        }
 
         [$file, $line] = explode(':', $offender);
 

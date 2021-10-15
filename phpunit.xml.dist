@@ -15,6 +15,7 @@
     <testsuites>
         <testsuite name="unit">
             <directory>tests/</directory>
+            <exclude>tests/Stub</exclude>
         </testsuite>
     </testsuites>
 

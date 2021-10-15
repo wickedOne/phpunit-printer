@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of WickedOne\PHPUnitPrinter.
  *
@@ -9,10 +11,15 @@
  * file that was distributed with this source code.
  */
 
-$file = __DIR__.'/../vendor/autoload.php';
+namespace WickedOne\PHPUnitPrinter\Tests\Stub;
 
-if (!file_exists($file)) {
-    throw new RuntimeException('Install dependencies using composer to run the test suite.');
+use PHPUnit\Framework\TestCase;
+
+/**
+ * EmptyTest Class.
+ *
+ * @author wicliff <wicliff.wolda@gmail.com>
+ */
+class EmptyTestClass extends TestCase
+{
 }
-
-$autoload = require $file;
