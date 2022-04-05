@@ -64,7 +64,7 @@ jobs:
         run: "vendor/bin/phpunit --coverage-clover coverage.xml"
 
       - name: "upload to codecov"
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
 
       - name: "infection"
         run: "./vendor/bin/infection -j$(nproc) --logger-github --min-msi=$MIN_MSI --min-covered-msi=$MIN_COVERED_MSI --test-framework-options='--testsuite=unit'"
