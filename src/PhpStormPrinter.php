@@ -13,33 +13,23 @@ declare(strict_types=1);
 
 namespace WickedOne\PHPUnitPrinter;
 
-use const PHP_SAPI;
 use PHPUnit\Framework\TestFailure;
 use PHPUnit\TextUI\DefaultResultPrinter;
 
 /**
- * PhpStorm Printer.
- *
  * @author wicliff <wicliff.wolda@gmail.com>
  */
 class PhpStormPrinter extends DefaultResultPrinter
 {
-    /**
-     * @param \PHPUnit\Framework\TestFailure $defect
-     * @param int                            $count
-     */
     protected function printDefect(TestFailure $defect, int $count): void
     {
         parent::printDefect($defect, $count);
 
-        if (PHP_SAPI === 'cli') {
+        if (\PHP_SAPI === 'cli') {
             $this->printDefectFooter($defect);
         }
     }
 
-    /**
-     * @param \PHPUnit\Framework\TestFailure $defect
-     */
     private function printDefectFooter(TestFailure $defect): void
     {
         $trace = explode(\PHP_EOL, trim((string) $defect->thrownException()));
