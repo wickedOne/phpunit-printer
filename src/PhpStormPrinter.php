@@ -13,36 +13,32 @@ declare(strict_types=1);
 
 namespace WickedOne\PHPUnitPrinter;
 
-use const PHP_SAPI;
 use PHPUnit\Framework\TestFailure;
 use PHPUnit\TextUI\DefaultResultPrinter;
 
 /**
- * PhpStorm Printer.
- *
  * @author wicliff <wicliff.wolda@gmail.com>
  */
 class PhpStormPrinter extends DefaultResultPrinter
 {
-    /**
-     * @param \PHPUnit\Framework\TestFailure $defect
-     * @param int                            $count
-     */
     protected function printDefect(TestFailure $defect, int $count): void
     {
         parent::printDefect($defect, $count);
 
-        if (PHP_SAPI === 'cli') {
+        if (\PHP_SAPI === 'cli') {
             $this->printDefectFooter($defect);
         }
     }
 
     /**
-     * @param \PHPUnit\Framework\TestFailure $defect
+     * @group ci-borked
+     *
+     * github actions for some reason _always_ has a failing line so this test will always fail.
      */
     private function printDefectFooter(TestFailure $defect): void
     {
         $trace = explode(\PHP_EOL, trim((string) $defect->thrownException()));
+        print_r($trace);
         $offender = end($trace);
 
         // the things you do to please infection... ;-)
