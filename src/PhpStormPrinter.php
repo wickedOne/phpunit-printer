@@ -30,15 +30,9 @@ class PhpStormPrinter extends DefaultResultPrinter
         }
     }
 
-    /**
-     * @group ci-borked
-     *
-     * github actions for some reason _always_ has a failing line so this test will always fail.
-     */
     private function printDefectFooter(TestFailure $defect): void
     {
         $trace = explode(\PHP_EOL, trim((string) $defect->thrownException()));
-        print_r($trace);
         $offender = end($trace);
 
         // the things you do to please infection... ;-)
