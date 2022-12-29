@@ -5,15 +5,15 @@
             "src"
         ]
     },
-    "phpUnit": {
-        "configDir": "."
+    "timeout": 10,
+    "logs": {
+        "text": "./build/infection.log",
+        "stryker": {
+            "report": "main"
+        }
     },
     "mutators": {
         "@default": true
     },
-    "logs": {
-        "badge": {
-            "branch": "main"
-        }
-    }
+    "testFramework": "phpunit"
 }
