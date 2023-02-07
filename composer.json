@@ -33,6 +33,9 @@
     "require-dev": {
         "infection/infection": "^0.26"
     },
+    "conflict": {
+        "phpunit/phpunit": "^10.0.0"
+    },
     "extra": {
         "branch-alias": {
             "dev-main": "0.1.x-dev"
