@@ -31,7 +31,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require-dev": {
-        "infection/infection": "^0.26"
+        "infection/infection": "^0.27"
     },
     "conflict": {
         "phpunit/phpunit": "^10.0.0"
