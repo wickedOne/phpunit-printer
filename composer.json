@@ -31,7 +31,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require-dev": {
-        "infection/infection": "^0.27"
+        "infection/infection": "^0.28"
     },
     "extra": {
         "branch-alias": {
