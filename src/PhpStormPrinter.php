@@ -43,7 +43,7 @@ class PhpStormPrinter extends DefaultResultPrinter
         [$file, $line] = explode(':', $offender);
 
         if (isset($file, $line)) {
-            $this->write(sprintf(
+            $this->write(\sprintf(
                 "✏️  phpstorm://open?file=%s&line=%d\n",
                 $file,
                 $line
