@@ -34,7 +34,7 @@ jobs:
         uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5
 
       - name: "install php"
-        uses: "shivammathur/setup-php@2.35.4"
+        uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "pcov"
           php-version: "${{ matrix.php-version }}"
@@ -68,7 +68,7 @@ jobs:
         uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5
 
       - name: "install php"
-        uses: "shivammathur/setup-php@2.35.4"
+        uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "xdebug"
           php-version: "${{ matrix.php-version }}"
@@ -104,7 +104,7 @@ jobs:
         uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5
 
       - name: "install PHP"
-        uses: "shivammathur/setup-php@2.35.4"
+        uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "none"
           php-version: "${{ matrix.php-version }}"
